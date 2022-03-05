@@ -10,3 +10,11 @@ TEST_CASE("check number of readings in given range from charging session"){
 	checkNumberOfReadingsInRange(data, rangeLow, rangeHigh);
 	REQUIRE(!strncmp(RangeAndReading, "4-5,2", 5));
 }
+
+TEST_CASE("check of no readings found in given range from charging session"){
+  	int data[DATA_STREAM_SIZE] = {3,0,-2};
+	int rangeLow = 4;
+	int rangeHigh = 5;
+	checkNumberOfReadingsInRange(data, rangeLow, rangeHigh);
+	REQUIRE(!strncmp(RangeAndReading, "4-5,0", 5));
+}
