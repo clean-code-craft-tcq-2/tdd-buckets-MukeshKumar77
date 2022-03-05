@@ -4,9 +4,9 @@
 #include "range_checker.h"
 
 TEST_CASE("check number of readings in given range from charging session"){
-	int data[] = {4,5};
+  	int data[DATA_STREAM_SIZE] = {4,5};
 	int rangeLow = 4;
 	int rangeHigh = 5;
-	char* readingAndRange = checkNumberOfReadingsInRange(data, rangeLow, rangeHigh);
+	checkNumberOfReadingsInRange(data, rangeLow, rangeHigh);
 	REQUIRE(!strncmp(readingAndRange, "4-5,2", 5));
 }
