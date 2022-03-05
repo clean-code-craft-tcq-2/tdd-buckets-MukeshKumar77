@@ -3,6 +3,9 @@
 #include "test/catch.hpp"
 
 TEST_CASE("check number of readings in given range from charging session"){
-  int inputRange[] = {4,5};
-	checkNumberOfReadingsInRange(inputRange);
-	REQUIRE(4-5, 2);
+	int data[] = {4,5};
+	int rangeLow = 4;
+	int rangeHigh = 5;
+	char* readingAndRange = checkNumberOfReadingsInRange(data, rangeLow, rangeHigh);
+	REQUIRE(!strcmp(readingAndRange, "4-5,2"));
+}
