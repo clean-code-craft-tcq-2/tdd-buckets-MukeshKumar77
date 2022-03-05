@@ -8,5 +8,5 @@ TEST_CASE("check number of readings in given range from charging session"){
 	int rangeLow = 4;
 	int rangeHigh = 5;
 	char* readingAndRange = checkNumberOfReadingsInRange(data, rangeLow, rangeHigh);
-	REQUIRE(!strncmp(RangeAndReading, "4-5,2", 5));
+	REQUIRE(!strncmp(readingAndRange, "4-5,2", 5));
 }
