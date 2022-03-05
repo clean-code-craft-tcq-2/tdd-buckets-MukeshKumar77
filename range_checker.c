@@ -13,8 +13,5 @@ void checkNumberOfReadingsInRange(int* inputStream, int rangeStart, int rangeEnd
 		}
 	}
 
-	char tempRangeAndReading[DATA_STREAM_SIZE];
-	sprintf(tempRangeAndReading, "%d-%d,%d",rangeStart, rangeEnd, numberOfReadings);
-
-	strcpy(RangeAndReading, tempRangeAndReading);
+	sprintf(RangeAndReading, "%d-%d,%d",rangeStart, rangeEnd, numberOfReadings);
 }
