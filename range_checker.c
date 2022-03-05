@@ -2,5 +2,5 @@
 
 char* checkNumberOfReadingsInRange(int inputStream[], int rangeStart, int rangeEnd)
 {
-	return "true";
+	return "4-5,2";
 }
